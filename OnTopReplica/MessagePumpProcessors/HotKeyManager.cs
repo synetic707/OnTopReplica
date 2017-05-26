@@ -98,6 +98,7 @@ namespace OnTopReplica.MessagePumpProcessors {
 
             RegisterHandler(Settings.Default.HotKeyCloneCurrent, HotKeyCloneHandler);
             RegisterHandler(Settings.Default.HotKeyShowHide, HotKeyShowHideHandler);
+            RegisterHandler(Settings.Default.HotKeyClickThrough, HotKeyClickThoughHandler);
         }
 
         private void RegisterHandler(string spec, HotKeyHandler handler) {
@@ -158,6 +159,11 @@ namespace OnTopReplica.MessagePumpProcessors {
                 return;
 
             Form.SetThumbnail(handle, null);
+        }
+
+        void HotKeyClickThoughHandler()
+        {
+            Form.ClickThroughEnabled = Form.ClickThroughEnabled ? false : true;
         }
 
         #endregion

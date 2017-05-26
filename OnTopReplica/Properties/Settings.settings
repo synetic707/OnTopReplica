@@ -59,5 +59,8 @@
     <Setting Name="RestoreLastShowChrome" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="HotKeyClickThrough" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[CTRL]+[SHIFT]+A</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

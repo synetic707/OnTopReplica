@@ -27,6 +27,7 @@ namespace OnTopReplica {
 
         public MainForm(Options startupOptions) {
             _startupOptions = startupOptions;
+           
 
             FullscreenManager = new FullscreenFormManager(this);
             _quickRegionDrawingHandler = new ThumbnailPanel.RegionDrawnHandler(HandleQuickRegionDrawn);

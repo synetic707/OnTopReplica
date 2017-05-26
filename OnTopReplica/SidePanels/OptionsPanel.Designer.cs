@@ -34,6 +34,8 @@
             this.groupLanguage = new System.Windows.Forms.GroupBox();
             this.comboLanguage = new OnTopReplica.ImageComboBox();
             this.lblLanguage = new System.Windows.Forms.Label();
+            this.hotKeyClickToggle = new OnTopReplica.HotKeyTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.groupHotkeys.SuspendLayout();
             this.groupLanguage.SuspendLayout();
@@ -42,7 +44,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(220, 243);
+            this.btnClose.Location = new System.Drawing.Point(220, 294);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(87, 27);
             this.btnClose.TabIndex = 0;
@@ -56,18 +58,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.AutoScroll = true;
+            this.panelMain.Controls.Add(this.label1);
             this.panelMain.Controls.Add(this.groupHotkeys);
             this.panelMain.Controls.Add(this.groupLanguage);
             this.panelMain.Location = new System.Drawing.Point(7, 7);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(301, 230);
+            this.panelMain.Size = new System.Drawing.Size(301, 281);
             this.panelMain.TabIndex = 1;
             // 
             // groupHotkeys
             // 
             this.groupHotkeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupHotkeys.Controls.Add(this.label1);
+            this.groupHotkeys.Controls.Add(this.label2);
+            this.groupHotkeys.Controls.Add(this.hotKeyClickToggle);
             this.groupHotkeys.Controls.Add(this.lblHotKeyShowHide);
             this.groupHotkeys.Controls.Add(this.txtHotKeyShowHide);
             this.groupHotkeys.Controls.Add(this.lblHotKeyClone);
@@ -83,7 +87,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(7, 78);
+            this.label1.Location = new System.Drawing.Point(10, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 50);
             this.label1.TabIndex = 4;
@@ -166,6 +170,26 @@
             this.lblLanguage.TabIndex = 1;
             this.lblLanguage.Text = "Requires a restart.";
             // 
+            // hotKeyClickToggle
+            // 
+            this.hotKeyClickToggle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hotKeyClickToggle.Location = new System.Drawing.Point(10, 96);
+            this.hotKeyClickToggle.Name = "hotKeyClickToggle";
+            this.hotKeyClickToggle.ReadOnly = true;
+            this.hotKeyClickToggle.Size = new System.Drawing.Size(181, 23);
+            this.hotKeyClickToggle.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(195, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 33);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Clickthrough Toggle";
+            // 
             // OptionsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -175,8 +199,8 @@
             this.Controls.Add(this.btnClose);
             this.MinimumSize = new System.Drawing.Size(315, 277);
             this.Name = "OptionsPanel";
-            this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.Size = new System.Drawing.Size(315, 277);
+            this.Padding = new System.Windows.Forms.Padding(7);
+            this.Size = new System.Drawing.Size(315, 328);
             this.panelMain.ResumeLayout(false);
             this.groupHotkeys.ResumeLayout(false);
             this.groupHotkeys.PerformLayout();
@@ -198,5 +222,7 @@
         private HotKeyTextBox txtHotKeyShowHide;
         private System.Windows.Forms.Label lblHotKeyClone;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private HotKeyTextBox hotKeyClickToggle;
     }
 }
